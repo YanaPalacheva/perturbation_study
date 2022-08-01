@@ -1,0 +1,17 @@
+# Online status tracking (OST) configuration file
+# Audapter assigns an integer status number to each input frame in real time. 
+# In post-processing, these state numbers are stored in data.ost_stat
+# These state numbers can be mapped to various types of perturbations in (PCF) files.
+# Command to load: Audapter('ost', path_to_ost_file, 0(verbosity 0/1));
+# Start duration of a syllable: voice inset + ~300 ms (can be replaced by mean value later)
+rmsSlopeWin = 0.030000 # window size (in seconds) for computing the slopes of short-time RMS intensity
+
+# Main section: Heuristic rules for tracking
+n = 3
+0 INTENSITY_RISE_HOLD 0.012 0.010 {} # Detect voice onset; prm1: rmsThresh (intensity), prm2: minDur (s)
+2 ELAPSED_TIME 0.300 0 {} # wait for 300 ms after voice onset (state 0)
+3 OST_END NaN NaN {} # Compulsory ending rule
+
+# maxIOICfg - maximum-inter-onset-interval mode of tracking, a way of dealing with failures
+n = 1
+0 0.500 3 # if from the onset of state 0 500 ms elapsed, proceed to a state 3 forcefully 
