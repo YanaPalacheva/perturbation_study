@@ -7,7 +7,8 @@ We used [PsychoPy](https://www.psychopy.org/) to set up the experiment.
 * clone this repository with `git clone https://github.com/YanaPalacheva/perturbation_study.git`
 * prepare a virtual environment for the experiment 
     * e.g. if you use Anaconda, run in Anaconda Prompt the following commands:
-        * `conda conda create -n jnd_env python=3.8`
+        * `conda create -n jnd_env python=3.8`
+        * `conda activate jnd_env`
         * `pip install psychopy`
         * `cd YOUR_PATH/perturbation_study/jnd_experiment`
 * create a folder "**audio_stimuli**" and put there the stimuli recordings 
