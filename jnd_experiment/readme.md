@@ -7,14 +7,13 @@ We used [PsychoPy](https://www.psychopy.org/) to set up the experiment.
 * clone this repository with `git clone https://github.com/YanaPalacheva/perturbation_study.git`
 * prepare a virtual environment for the experiment 
     * e.g. if you use Anaconda, run in Anaconda Prompt the following commands:
-        * `conda create -n jnd_env python=3.8`
+        * `conda conda create -n jnd_env python=3.8`
         * `conda activate jnd_env`
-        * `pip install psychopy`
+        * `pip install psychopy librosa`
         * `cd YOUR_PATH/perturbation_study/jnd_experiment`
-* create a folder "**audio_stimuli**" and put there the stimuli recordings 
-(the filenames should follow the convention id_pitch.wav, e.g. moni_400.wav)
+* create a folder "**audio**" and put there the stimuli recordings (for this experiment: **audio-FL, audio-pause, audio-pitch**)
 
-**Run experiment:** `python audio_jnd.py`
+**Run experiment:** `python jnd_experiment.py`
 
-First, a small dialogue window will appear. Enter the subject id and press "OK". The follow the visual cues in the newly opened window.
-The results will be recorded in the file "JND_Pitch_*SUBJECTID*_*timestamp*.csv" in the "**results**" folder.
+First, a small dialogue window will appear. Enter the subject id, name of the subfolder (here: **ch** or **03**) and press "OK". The follow the visual cues in the newly opened window.
+The results will be recorded in the file "JND_*TaskName*\_*SUBJECTID*_*timestamp*.csv" in the "**results**" folder.
