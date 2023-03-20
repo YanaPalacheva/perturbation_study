@@ -19,6 +19,7 @@ if not dlg.OK:
 
 # open the experiment window
 win = visual.Window(size=[1000, 800], monitor='laptop', units='norm')
+win.flip()
 
 randomized_tasks = random.sample(general_experiment_configs["task_types"],
                                  k=len(general_experiment_configs["task_types"]))
@@ -27,7 +28,7 @@ for ind, task in enumerate(randomized_tasks):
     run_jnd_task(exp_data, task, win, session_type='practice')
 
     # run the experiment
-    # run_jnd_task(exp_data, task, win, session_type='trial')
+    run_jnd_task(exp_data, task, win, session_type='trial')
     # give some on-screen feedback?
     visual.TextStim(win, text=f"Sehr gut! Schon {ind+1}/{len(randomized_tasks)} geschafft. "
                               f"Drücken Sie auf den weiter-Button,"

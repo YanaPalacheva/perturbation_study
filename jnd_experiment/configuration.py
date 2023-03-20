@@ -2,6 +2,7 @@ from resources import pitch_FL_text, pause_text
 
 general_experiment_configs = {"task_types": ["pitch", "FL", "pause"],
                               "num_runs": 3,
+                              "num_trials_each_run": 60,
                               "base_stimuli_path": 'audio/',  # input path is generated as base_stimuli_path+task name
                               "output_path": 'results/'}
 
