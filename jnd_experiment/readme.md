@@ -1,7 +1,7 @@
 ### Step by step guide on executing the JND experiment
 
 The staircase algorithm is based on the paper [Contributions of Auditory and Somatosensory Feedback to Vocal Motor Control](https://pubs.asha.org/doi/full/10.1044/2020_JSLHR-19-00296) by Smith et al. 
-We used [PsychoPy](https://www.psychopy.org/) to set up the experiment.
+We used [PsychoPy](https://www.psychopy.org/) to set up the experiment. This code is tested on Python 3.8.
 
 **Preparation:**
 * clone this repository with `git clone https://github.com/YanaPalacheva/perturbation_study.git`
